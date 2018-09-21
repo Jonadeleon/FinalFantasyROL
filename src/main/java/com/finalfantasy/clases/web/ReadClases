@@ -1,0 +1,64 @@
+package com.finalfatasy.clases.web;
+//Importaciones de sql
+import com.sun.org.apache.xpath.internal.SourceTree;
+
+import javax.imageio.stream.IIOByteBuffer;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+
+public class ReadClases {
+    //ArrayList para leer clases
+    public ArrayList readclases(String buscar) {
+        ArrayList al = new ArrayList();
+        try {
+            //Ponemos que usamos base de datos Oracle
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@35.205.41.45:1521:XE", "usuari","usuari");
+
+            Statement stmt = con.createStatement();
+            //Ponemos el SELECT de lo que queremos ver
+            ResultSet rs;
+
+            if (buscar == null || buscar.equals("")){
+                rs = stmt.executeQuery("SELECT * FROM (SELECT NOMBRE, MOD_STATS, DPV, DPM, PARADIGMA, LICENCIAS, HABILIDADES FROM CLASES)");
+            }
+            else {
+                rs = stmt.executeQuery("SELECT * FROM (SELECT NOMBRE, MOD_STATS, DPV, DPM, PARADIGMA, LICENCIAS, HABILIDADES FROM CLASES)");
+            }
+
+            while (rs.next()) {
+                //Las columnas que queremos ver
+                String nombre_clase = rs.getString("NOMBRE");
+                String mod_stats_clase = rs.getString("MOD_STATS");
+                String dpv_clase = rs.getString("DPV");
+                String dpm_clase = rs.getString("DPM");
+                String paradigma_clase = rs.getString("PARADIGMA");
+                String licencias_clase = rs.getString("LICENCIAS");
+                String habilidades_clase = rs.getString("HABILIDADES");
+
+
+                Clase std = new Clase();
+                std.setNombre_clase(nombre_clase);
+                std.setMod_stats_clase(mod_stats_clase);
+                std.setDpv_clase(dpv_clase);
+                std.setDpm_clase(dpm_clase);
+                std.setParadigma_clase(paradigma_clase);
+                std.setLicencias_clase(licencias_clase);
+                std.setHabilidades_clase(habilidades_clase);
+
+
+                al.add(std);
+            }
+            stmt.close();
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+        return al;
+    }
+}
