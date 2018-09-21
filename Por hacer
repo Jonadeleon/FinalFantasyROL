@@ -1,0 +1,10 @@
+- Dibujar las tablas y sus relaciones para tener claro que va con que.
+  Nota de tablas a crear por ahora: Clases(Sacar informacion individual de cada clase), Razas, Equipo(dentro de equipo: Armas de Fuego, Armas CaC, AA, Armaduras, etc), 
+  Invocaciones, Canciones, Magias(seran unas cuantas tablas), Licencias, Aumentos, Items, NPC, Materias...
+  
+- Crear DB con todas las tablas y hacer las relaciones de tablas.
+- Probar con Querys si se dan los valores que se desean.
+- Llamar a la base de datos en ReadClases, ReadRazas, etc
+- Hacer una pagina de inicio con botones para las cosas que llevan a otro jsp
+- Pintar las cosas que se quieren ver cuando pulsas un boton
+- En el boton de "personajes" poner una barra de busqueda y filtros
