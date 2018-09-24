@@ -1,6 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.finalfantasy.armaduras.web.Armaduras" %>
-<%@ page import="com.finalfantasy.armaduras.web.ReadArmaduras" %>
+<%@ page import="com.finalfantasy.armas.web.armas" %>
+<%@ page import="com.finalfantasy.armas.web.ReadArmas" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 

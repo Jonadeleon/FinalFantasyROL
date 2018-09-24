@@ -44,32 +44,32 @@
             </div>
 
             <div>
-                <form action="armaduras.jsp">
+                <form action="armaduras.jsp"
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ver Armaduras</button>
                 </form>
             </div>
 
 
             <div>
-                <form action="armas.jsp">
+                <form action="armas.jsp"
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ver Armas</button>
                 </form>
             </div>
 
             <div>
-                <form action="materias.jsp">
+                <form action="materias.jsp"
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ver Materias</button>
                 </form>
             </div>
 
             <div>
-                <form action="items.jsp">
+                <form action="items.jsp"
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ver Items</button>
                 </form>
             </div>
 
             <div>
-                <form action="personajes.jsp">
+                <form action="personajes.jsp"
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ver Personajes</button>
                 </form>
             </div>

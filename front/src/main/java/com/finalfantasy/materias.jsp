@@ -1,6 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.finalfantasy.armaduras.web.Armaduras" %>
-<%@ page import="com.finalfantasy.armaduras.web.ReadArmaduras" %>
+<%@ page import="com.finalfantasy.materias.web.materias" %>
+<%@ page import="com.finalfantasy.materias.web.ReadMaterias" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -50,7 +50,7 @@
         <%
             Materia materia = (Materia) request.getAttribute("id");
                 out.println(
-                        "<p>" + materia.getColor_materia) + "</p>" +
+                        "<p>" + materia.getColor_materia() + "</p>" +
                         "<p>" + materia.getNombre_materia() + "</p>" +
                         "<p>" + materia.getDescripcion_materia() + "</p>" +
                         "<p>" + materia.getNivel_materia() + "</p>" +

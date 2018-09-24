@@ -1,6 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.finalfantasy.armaduras.web.Armaduras" %>
-<%@ page import="com.finalfantasy.armaduras.web.ReadArmaduras" %>
+<%@ page import="com.finalfantasy.items.web.items" %>
+<%@ page import="com.finalfantasy.items.web.ReadItems" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -50,7 +50,7 @@
         <%
             Item item = (Item) request.getAttribute("id");
                 out.println(
-                        "<p>" + item.getTipo_item) + "</p>" +
+                        "<p>" + item.getTipo_item() + "</p>" +
                         "<p>" + item.getNombre_item() + "</p>" +
                         "<p>" + item.getDescripcion_item() + "</p>" +
                         "<p>" + item.getPrecio_item() + "</p>"
