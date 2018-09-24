@@ -50,7 +50,7 @@
         <%
             Arma arma = (Arma) request.getAttribute("id");
                 out.println(
-                        "<p>" + arma.getTipo_arma) + "</p>" +
+                        "<p>" + arma.getTipo_arma() + "</p>" +
                         "<p>" + arma.getNombre_arma() + "</p>" +
                         "<p>" + arma.getAt_arma() + "</p>" +
                         "<p>" + arma.getDamage_arma() + "</p>" +
