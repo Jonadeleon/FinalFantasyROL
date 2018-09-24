@@ -1,6 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.finalfantasy.clases.web.Clases" %>
-<%@ page import="com.finalfantasy.clases.web.ReadClases" %>
+<%@ page import="com.finalfantasy.armaduras.web.Armaduras" %>
+<%@ page import="com.finalfantasy.armaduras.web.ReadArmaduras" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -48,15 +48,15 @@
     <div class="container">
 
         <%
-            Clase clase = (Clase) request.getAttribute("id");
+            Armadura armadura = (Armadura) request.getAttribute("id");
                 out.println(
-                        "<p>" + clase.getNombre_clase() + "</p>" +
-                        "<p>" + clase.getMod_stats_clase() + "</p>" +
-                        "<p>" + clase.getDpv_clase() + "</p>" +
-                        "<p>" + clase.getDpm_clase() + "</p>" +
-                        "<p>" + clase.getParadigma_clase() + "</p>" +
-                        "<p>" + clase.getLicencias_clase() + "</p>" +
-                        "<p>" + clase.getHabilidades_clase() + "</p>"
+                        "<p>" + armadura.getNombre_clase() + "</p>" +
+                        "<p>" + armadura.getMod_stats_clase() + "</p>" +
+                        "<p>" + armadura.getDpv_clase() + "</p>" +
+                        "<p>" + armadura.getDpm_clase() + "</p>" +
+                        "<p>" + armadura.getParadigma_clase() + "</p>" +
+                        "<p>" + armadura.getLicencias_clase() + "</p>" +
+                        "<p>" + armadura.getHabilidades_clase() + "</p>"
                 );
         %>
         <hr>

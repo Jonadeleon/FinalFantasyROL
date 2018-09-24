@@ -1,4 +1,4 @@
-package com.finalfatasy.razas.web;
+package com.finalfatasy.armaduras.web;
 //Importaciones de sql
 import com.sun.org.apache.xpath.internal.SourceTree;
 
@@ -10,9 +10,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 
-public class ReadRazas {
-    //ArrayList para leer razas
-    public ArrayList readrazas(String buscar) {
+public class ReadArmaduras {
+    //ArrayList para leer clases
+    public ArrayList readarmaduras(String buscar) {
         ArrayList al = new ArrayList();
         try {
             //Ponemos que usamos base de datos Oracle
@@ -23,14 +23,18 @@ public class ReadRazas {
             //Ponemos el SELECT de lo que queremos ver
             ResultSet rs;
 
-            rs = stmt.executeQuery("SELECT * FROM (SELECT R.NOMBRE, R.MOD_STATS, H.HABILIDADES FROM RAZAS R, HABILIDADES H WHERE r.id_raza = h.id_raza)");
+            rs = stmt.executeQuery("SELECT TIPO_ARMADURA, NOMBRE_ARMADURA, DEFENSA_ARMADURA, DEFENSA_MAGICA_ARMADURA, ESPECIAL_ARMADURA, PRECIO_ARMADURA FROM ARMADURAS");
 
             if (rs.next()) {
-                rstt = new Raza();
+                rstt = new Armadura();
+
                 //Las columnas que queremos ver
-                rstt.nombre_raza(rs.getString("NOMBRE"));
-                rstt.mod_stats_raza(rs.getString("MOD_STATS"));
-                rstt.habilidades_raza(rs.getString("HABILIDADES"));
+                rstt.setTipo_armadura(rs.getString("TIPO_ARMADURA"));
+                rstt.setNombre_armadura(rs.getString("NOMBRE_ARMADURA"));
+                rstt.setDefensa_armadura(rs.getString("DEFENSA_ARMADURA"));
+                rstt.setDefensa_magica_armadura(rs.getString("DEFENSA_MAGICA_ARMADURA"));
+                rstt.setEspecial_armadura(rs.getString("ESPECIAL_ARMADURA"));
+                rstt.setPrecio_armadura(rs.getString("PRECIO_ARMADURA"));
 
                 al.add(std);
             }

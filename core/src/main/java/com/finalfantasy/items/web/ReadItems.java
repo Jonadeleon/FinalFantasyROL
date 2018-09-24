@@ -1,4 +1,4 @@
-package com.finalfatasy.razas.web;
+package com.finalfatasy.items.web;
 //Importaciones de sql
 import com.sun.org.apache.xpath.internal.SourceTree;
 
@@ -10,9 +10,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 
-public class ReadRazas {
-    //ArrayList para leer razas
-    public ArrayList readrazas(String buscar) {
+public class ReadItems {
+    //ArrayList para leer clases
+    public ArrayList readitems(String buscar) {
         ArrayList al = new ArrayList();
         try {
             //Ponemos que usamos base de datos Oracle
@@ -23,14 +23,16 @@ public class ReadRazas {
             //Ponemos el SELECT de lo que queremos ver
             ResultSet rs;
 
-            rs = stmt.executeQuery("SELECT * FROM (SELECT R.NOMBRE, R.MOD_STATS, H.HABILIDADES FROM RAZAS R, HABILIDADES H WHERE r.id_raza = h.id_raza)");
+            rs = stmt.executeQuery("SELECT TIPO_ITEM, NOMBRE_ITEM, DESCRIPCION_ITEM, PRECIO_ITEM FROM ITEMS");
 
             if (rs.next()) {
-                rstt = new Raza();
+                rstt = new Item();
+
                 //Las columnas que queremos ver
-                rstt.nombre_raza(rs.getString("NOMBRE"));
-                rstt.mod_stats_raza(rs.getString("MOD_STATS"));
-                rstt.habilidades_raza(rs.getString("HABILIDADES"));
+                rstt.setTipo_item(rs.getString("TIPO_ITEM"));
+                rstt.setNombre_item(rs.getString("NOMBRE_ITEM"));
+                rstt.setDescripcion_item(rs.getString("DESCRIPCION_ITEM"));
+                rstt.setPrecio_item(rs.getString("PRECIO_ITEM"));
 
                 al.add(std);
             }

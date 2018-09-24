@@ -1,4 +1,4 @@
-package com.finalfatasy.razas.web;
+package com.finalfatasy.escudos.web;
 //Importaciones de sql
 import com.sun.org.apache.xpath.internal.SourceTree;
 
@@ -10,9 +10,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 
-public class ReadRazas {
-    //ArrayList para leer razas
-    public ArrayList readrazas(String buscar) {
+public class ReadArmas
+    //ArrayList para leer clases
+    public ArrayList readescudos(String buscar) {
         ArrayList al = new ArrayList();
         try {
             //Ponemos que usamos base de datos Oracle
@@ -23,14 +23,17 @@ public class ReadRazas {
             //Ponemos el SELECT de lo que queremos ver
             ResultSet rs;
 
-            rs = stmt.executeQuery("SELECT * FROM (SELECT R.NOMBRE, R.MOD_STATS, H.HABILIDADES FROM RAZAS R, HABILIDADES H WHERE r.id_raza = h.id_raza)");
+            rs = stmt.executeQuery("SELECT TIPO_ESCUDO, DEFENSA_ESCUDO, DEFENSA_MAGICA_ESCUDO, DESCRIPCION_ESCUDO, PRECIO_ESCUDO FROM ESCUDOS");
 
             if (rs.next()) {
-                rstt = new Raza();
+                rstt = new Escudo();
+
                 //Las columnas que queremos ver
-                rstt.nombre_raza(rs.getString("NOMBRE"));
-                rstt.mod_stats_raza(rs.getString("MOD_STATS"));
-                rstt.habilidades_raza(rs.getString("HABILIDADES"));
+                rstt.setTipo_escudo(rs.getString("TIPO_ESCUDO"));
+				rstt.setDefensa_escudo(rs.getString("DEFENSA_ESCUDO");
+				rstt.setDefensa_magica_escudo(rs.getString("DEFENSA_MAGICA_ESCUDO");
+                rstt.setDescripcion_escudo(rs.getString("DESCRIPCION_ESCUDO"));
+                rstt.setPrecio_escudo(rs.getString("PRECIO_ESCUDO"));
 
                 al.add(std);
             }
