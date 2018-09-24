@@ -48,12 +48,14 @@
     <div class="container">
 
         <%
-            Item item = (Item) request.getAttribute("id");
+            Arma arma = (Arma) request.getAttribute("id");
                 out.println(
-                        "<p>" + item.getTipo_item) + "</p>" +
-                        "<p>" + item.getNombre_item() + "</p>" +
-                        "<p>" + item.getDescripcion_item() + "</p>" +
-                        "<p>" + item.getPrecio_item() + "</p>"
+                        "<p>" + arma.getTipo_arma) + "</p>" +
+                        "<p>" + arma.getNombre_arma() + "</p>" +
+                        "<p>" + arma.getAt_arma() + "</p>" +
+                        "<p>" + arma.getDamage_arma() + "</p>" +
+                        "<p>" + arma.getDescripcion_arma() + "</p>" +
+                        "<p>" + arma.getPrecio_arma() + "</p>"
                 );
         %>
         <hr>

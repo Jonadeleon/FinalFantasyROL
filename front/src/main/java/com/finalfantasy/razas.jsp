@@ -48,12 +48,11 @@
     <div class="container">
 
         <%
-            Item item = (Item) request.getAttribute("id");
+            Raza raza = (Raza) request.getAttribute("id");
                 out.println(
-                        "<p>" + item.getTipo_item) + "</p>" +
-                        "<p>" + item.getNombre_item() + "</p>" +
-                        "<p>" + item.getDescripcion_item() + "</p>" +
-                        "<p>" + item.getPrecio_item() + "</p>"
+                        "<p>" + raza.getNombre_raza() + "</p>" +
+                        "<p>" + raza.getMod_stats_raza() + "</p>" +
+                        "<p>" + raza.getHabilidades_raza() + "</p>"
                 );
         %>
         <hr>

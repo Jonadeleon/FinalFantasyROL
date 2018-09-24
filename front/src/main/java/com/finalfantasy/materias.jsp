@@ -48,12 +48,13 @@
     <div class="container">
 
         <%
-            Item item = (Item) request.getAttribute("id");
+            Materia materia = (Materia) request.getAttribute("id");
                 out.println(
-                        "<p>" + item.getTipo_item) + "</p>" +
-                        "<p>" + item.getNombre_item() + "</p>" +
-                        "<p>" + item.getDescripcion_item() + "</p>" +
-                        "<p>" + item.getPrecio_item() + "</p>"
+                        "<p>" + materia.getColor_materia) + "</p>" +
+                        "<p>" + materia.getNombre_materia() + "</p>" +
+                        "<p>" + materia.getDescripcion_materia() + "</p>" +
+                        "<p>" + materia.getNivel_materia() + "</p>" +
+                        "<p>" + materia.getPrecio_materia() + "</p>"
                 );
         %>
         <hr>

@@ -50,13 +50,12 @@
         <%
             Armadura armadura = (Armadura) request.getAttribute("id");
                 out.println(
-                        "<p>" + armadura.getNombre_clase() + "</p>" +
-                        "<p>" + armadura.getMod_stats_clase() + "</p>" +
-                        "<p>" + armadura.getDpv_clase() + "</p>" +
-                        "<p>" + armadura.getDpm_clase() + "</p>" +
-                        "<p>" + armadura.getParadigma_clase() + "</p>" +
-                        "<p>" + armadura.getLicencias_clase() + "</p>" +
-                        "<p>" + armadura.getHabilidades_clase() + "</p>"
+                        "<p>" + armadura.getTipo_armadura) + "</p>" +
+                        "<p>" + armadura.getNombre_armadura() + "</p>" +
+                        "<p>" + armadura.getDefensa_armadura() + "</p>" +
+                        "<p>" + armadura.getDefensa_magica_armadura() + "</p>" +
+                        "<p>" + armadura.getEspecial_armadura() + "</p>" +
+                        "<p>" + armadura.getPrecio_armadura() + "</p>"
                 );
         %>
         <hr>
