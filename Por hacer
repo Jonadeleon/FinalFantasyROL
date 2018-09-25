@@ -1,3 +1,5 @@
+Revisar el pom.xml cuando haga el pull en mi ordenador
+
 - Dibujar las tablas y sus relaciones para tener claro que va con que.
   Nota de tablas a crear por ahora: Clases(Sacar informacion individual de cada clase), Razas, Equipo(dentro de equipo: Armas de Fuego, Armas CaC, AA, Armaduras, etc), 
   Invocaciones, Canciones, Magias(seran unas cuantas tablas), Licencias, Aumentos, Items, NPC, Materias...
